@@ -1,6 +1,6 @@
 import gradio as gr
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 from langchain.llms import HuggingFaceHub
@@ -49,3 +49,4 @@ with gr.Blocks() as demo:
         query_btn.click(ask_query, inputs=query_input, outputs=answer_output)
 
 demo.launch()
+
