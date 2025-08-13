@@ -1,0 +1,10 @@
+streamlit
+chromadb
+sentence-transformers
+transformers
+torch
+pandas
+matplotlib
+scikit-learn
+statsmodels
+vaderSentiment
