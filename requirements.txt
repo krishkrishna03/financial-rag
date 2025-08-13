@@ -1,5 +1,6 @@
 streamlit==1.29.0
 langchain==0.1.162
+langchain-community==0.0.211
 chromadb==0.3.28
 sentence-transformers==2.2.2
 huggingface-hub==0.16.4
