@@ -1,11 +1,11 @@
 import chromadb
 from chromadb.utils import embedding_functions
 
-# Use DuckDB + Parquet backend
+# Force DuckDB + Parquet backend (avoids SQLite)
 client = chromadb.Client(
     persist_directory=".chromadb",
     settings=chromadb.config.Settings(
-        chroma_db_impl="duckdb+parquet",   # Important: avoids SQLite
+        chroma_db_impl="duckdb+parquet",
         persist_directory=".chromadb"
     )
 )
