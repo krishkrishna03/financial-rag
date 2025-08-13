@@ -1,5 +1,8 @@
+streamlit==1.29.0
+langchain==0.1.162
+chromadb==0.3.28
+sentence-transformers==2.2.2
+huggingface-hub==0.16.4
+pandas
+numpy
 gradio
-langchain
-chromadb
-huggingface-hub
-sentence-transformers
