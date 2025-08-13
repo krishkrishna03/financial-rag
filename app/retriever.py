@@ -10,10 +10,8 @@ client = chromadb.Client(
     )
 )
 
-# Create or get a collection
 collection = client.get_or_create_collection(name="financial_data")
 
-# Function to add documents
 def add_documents(docs, metadatas):
     collection.add(
         documents=docs,
@@ -21,6 +19,5 @@ def add_documents(docs, metadatas):
         ids=[str(i) for i in range(len(docs))]
     )
 
-# Function to query documents
 def query(text, top_k=5):
     return collection.query(query_texts=[text], n_results=top_k)
