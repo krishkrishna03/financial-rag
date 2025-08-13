@@ -8,7 +8,7 @@ langchain>=0.1.270
 
 # LangChain community for HuggingFace embeddings
 langchain-community
-
+langchain-huggingface
 # Vectorstore
 chromadb
 
@@ -19,5 +19,6 @@ huggingface-hub
 # Utilities
 numpy
 scipy
+
 
 
