@@ -1,3 +1,4 @@
+python-3.11.5
 streamlit==1.29.0
 langchain==0.1.162
 langchain-community==0.0.211
@@ -7,3 +8,4 @@ huggingface-hub==0.16.4
 pandas
 numpy
 gradio
+
