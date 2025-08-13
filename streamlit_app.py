@@ -1,3 +1,4 @@
+import os
 import gradio as gr
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
@@ -35,18 +36,18 @@ def ask_query(query):
 
 with gr.Blocks() as demo:
     gr.Markdown("## 📊 Financial Analysis RAG System (Gradio)")
-    
+
     with gr.Tab("Upload Documents"):
         file_input = gr.File(file_types=[".txt"], file_types_label="Upload Financial Reports", file_multiple=True)
         upload_btn = gr.Button("Upload & Index")
         output_text = gr.Textbox(label="Status")
         upload_btn.click(upload_docs, inputs=file_input, outputs=output_text)
-    
+
     with gr.Tab("Ask Query"):
         query_input = gr.Textbox(label="Enter your financial query")
         query_btn = gr.Button("Get Answer")
         answer_output = gr.Textbox(label="Answer")
         query_btn.click(ask_query, inputs=query_input, outputs=answer_output)
 
-demo.launch()
-
+# Render requires these settings
+demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)))
