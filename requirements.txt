@@ -1,16 +1,23 @@
 # Streamlit app
 streamlit==1.29.0
+# Gradio for UI
 gradio==3.39.0
 
-# LangChain & embeddings
-langchain>=0.3.24,<0.4
-langchain-community>=0.0.211
-chromadb>=0.3.28
-sentence-transformers>=2.2.2
+# LangChain core
+langchain>=0.1.270
 
-# Hugging Face
-huggingface-hub>=0.16.4
+# LangChain community for HuggingFace embeddings
+langchain-community
+
+# Vectorstore
+chromadb
+
+# Transformers and HuggingFace Hub
+sentence-transformers
+huggingface-hub
 
 # Utilities
-pandas
 numpy
+scipy
+
+
