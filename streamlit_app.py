@@ -1,10 +1,10 @@
 import os
 import gradio as gr
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 from langchain.llms import HuggingFaceHub
+from langchain_huggingface import HuggingFaceEmbeddings
 
 # Initialize vectorstore (empty initially)
 vectordb = None
@@ -51,3 +51,4 @@ with gr.Blocks() as demo:
 
 # Render requires these settings
 demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)))
+
